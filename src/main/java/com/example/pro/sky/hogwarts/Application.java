@@ -1,4 +1,4 @@
-package com.example.pro.sky.hogwarts.service;
+package com.example.pro.sky.hogwarts;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.boot.SpringApplication;

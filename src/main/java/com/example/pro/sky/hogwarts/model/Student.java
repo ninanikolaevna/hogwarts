@@ -1,14 +1,24 @@
 package com.example.pro.sky.hogwarts.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.util.Objects;
 
+@Entity(name = "student")
 public class Student {
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
     Long id;
     String name;
     int age;
-public Student() {
 
-}
+    public Student() {
+
+    }
+
     public Student(Long id, String name, int age) {
         this.id = id;
         this.name = name;

@@ -1,6 +1,14 @@
 package com.example.pro.sky.hogwarts.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity(name = "faculty")
 public class Faculty {
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
     private Long id;
     private String name;
     private String color;
@@ -10,8 +18,9 @@ public class Faculty {
         this.name = name;
         this.color = color;
     }
-    Faculty faculty = new Faculty();
-    public Faculty() {}
+
+    public Faculty() {
+    }
 
     public Long getId() {
         return id;
@@ -37,11 +46,5 @@ public class Faculty {
         this.color = color;
     }
 
-    public Faculty getFaculty() {
-        return faculty;
-    }
 
-    public void setFaculty(Faculty faculty) {
-        this.faculty = faculty;
-    }
 }
